@@ -23,7 +23,8 @@ _Despite the significant results on synthetic noise under simplified assumptions
 - opencv 4.5.5
 - scikit-image 0.16.2
 
-- ### 环境安装命令
+### 环境安装命令
+```
 pip install tensorboard -i https://pypi.tuna.tsinghua.edu.cn/simple
 pip install pyyaml -i https://pypi.tuna.tsinghua.edu.cn/simple
 pip install scikit-image==0.16.2 -i https://pypi.tuna.tsinghua.edu.cn/simple
@@ -34,6 +35,7 @@ pip install mat73 -i https://pypi.tuna.tsinghua.edu.cn/simple
 pip install wandb -i https://pypi.tuna.tsinghua.edu.cn/simple
 pip install einops -i https://pypi.tuna.tsinghua.edu.cn/simple
 pip install opencv-python -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
 
 
 ### 数据预处理命令
