@@ -41,9 +41,12 @@ pip install opencv-python -i https://pypi.tuna.tsinghua.edu.cn/simple
 ### 数据预处理命令
 #### DND
 python prep.py -d DND
-## 训练命令
+### 训练命令
 #### DND
 python train.py -s your_DND_model_lianghuan -c APBSN_DND/BSN_DND -g '0'
+### 测试命令
+#### DNN
+python test.py -s your_DND_model_lianghuan -c APBSN_DND/BSN_DND -g '0' -e 20
 
 
 ## Contents
