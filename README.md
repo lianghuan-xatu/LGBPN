@@ -44,7 +44,14 @@ python prep.py -d DND -p 1
 ### 训练命令
 #### DND
 python train.py -s your_DND_model_lianghuan -c APBSN_DND/BSN_DND -g '0'
+
 python train.py -s your_SIDD_model_lianghuan -c APBSN_SIDD/BSN_SIDD -g '0'
+#### 恢复训练命令
+python train.py -s your_DND_model_lianghuan -c APBSN_DND/BSN_DND -g '0' --resume
+
+python train.py -s your_SIDD_model_lianghuan -c APBSN_SIDD/BSN_SIDD -g '0' --resume
+
+
 ### 测试命令
 #### DNN
 python test.py -s your_DND_model_lianghuan -c APBSN_DND/BSN_DND -g '0' -e 20
