@@ -31,6 +31,15 @@ class local_branch(nn.Module):
         ly += [nn.Conv2d(in_ch, in_ch, kernel_size=1)]
         ly += [nn.ReLU(inplace=True)]
 
+        # 添加掩码卷积
+        ly += [CentralMaskedConv2d(in_ch, in_ch, kernel_size=2 * stride - 1, stride=1, padding=stride - 1)]
+        ly += [nn.ReLU(inplace=True)]
+        ly += [nn.Conv2d(in_ch, in_ch, kernel_size=1)]
+        ly += [nn.ReLU(inplace=True)]
+        ly += [nn.Conv2d(in_ch, in_ch, kernel_size=1)]
+        ly += [nn.ReLU(inplace=True)]
+
+
         ly += [DCl(stride, in_ch) for _ in range(num_module)]
 
         ly += [nn.Conv2d(in_ch, in_ch, kernel_size=1)]
@@ -527,3 +536,18 @@ class DCl(nn.Module):
 
     def forward(self, x):
         return x + self.body(x)
+
+
+# 掩码卷积模块
+class CentralMaskedConv2d(nn.Conv2d):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.register_buffer('mask', self.weight.data.clone())
+        _, _, kH, kW = self.weight.size()
+        self.mask.fill_(1)
+        self.mask[:, :, kH//2, kH//2] = 0
+
+    def forward(self, x):
+        self.weight.data *= self.mask
+        return super().forward(x)
