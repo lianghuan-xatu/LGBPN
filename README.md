@@ -65,6 +65,21 @@ python test.py -s your_DND_model_lianghuan -c APBSN_DND/BSN_DND -g '0' -e 20
 1. [Acknowledgement](#Acknowledgement) -->
 
 [1. Dataset](#1) 
+
+[2. Training & Testing](#2) 
+
+[3. Results](#3) 
+
+[4. Citation](#4) 
+
+[5. Acknowledgement](#5) 
+
+<p id="1"></p > 
+
+## Dataset
+
+We follow the dataset setup in AP-BSN. Please click [this link](https://github.com/wooseoklee4/AP-BSN#directory) for detailed preparation description.
+
 Follow below descriptions to build code directory.
 
 ```
@@ -87,21 +102,6 @@ AP-BSN
   - how to prepare existing or custom dataset is available at [here](./src/datahandler/prepare_dataset.md).
 - Make `output` folder which contains experimental results including checkpoint, val/test images and training logs.
 - Recommend to use __soft link__ due to folders would take large storage capacity.
-
-
-[2. Training & Testing](#2) 
-
-[3. Results](#3) 
-
-[4. Citation](#4) 
-
-[5. Acknowledgement](#5) 
-
-<p id="1"></p > 
-
-## Dataset
-
-We follow the dataset setup in AP-BSN. Please click [this link](https://github.com/wooseoklee4/AP-BSN#directory) for detailed preparation description.
 
 
 <p id="2"></p > 
