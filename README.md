@@ -65,6 +65,29 @@ python test.py -s your_DND_model_lianghuan -c APBSN_DND/BSN_DND -g '0' -e 20
 1. [Acknowledgement](#Acknowledgement) -->
 
 [1. Dataset](#1) 
+Follow below descriptions to build code directory.
+
+```
+AP-BSN
+├─ ckpt
+├─ conf
+├─ dataset
+│  ├─ DND
+│  ├─ SIDD
+│  ├─ NIND
+│  ├─ prep
+├─ figs
+├─ output
+├─ src
+```
+
+- Make `dataset` folder which contains various dataset.
+  - place [DND](https://noise.visinf.tu-darmstadt.de/), [SIDD](https://www.eecs.yorku.ca/~kamel/sidd/), [NIND](https://commons.wikimedia.org/wiki/Natural_Image_Noise_Dataset) datasets at here.
+  - `prep` folder contains prepared data for efficient training. (cropped patches with overlapping)
+  - how to prepare existing or custom dataset is available at [here](./src/datahandler/prepare_dataset.md).
+- Make `output` folder which contains experimental results including checkpoint, val/test images and training logs.
+- Recommend to use __soft link__ due to folders would take large storage capacity.
+
 
 [2. Training & Testing](#2) 
 
