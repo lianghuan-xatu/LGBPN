@@ -35,6 +35,7 @@ pip install mat73 -i https://pypi.tuna.tsinghua.edu.cn/simple
 pip install wandb -i https://pypi.tuna.tsinghua.edu.cn/simple
 pip install einops -i https://pypi.tuna.tsinghua.edu.cn/simple
 pip install opencv-python -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install chardet -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 
